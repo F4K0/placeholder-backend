@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  private:
+  build:
     docker:
       # specify the version you desire here
       - image: gradle:jdk13
