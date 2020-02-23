@@ -21,4 +21,4 @@ addons:
 
 script:
   - ./gradlew jacocoTestReport
-  - ./gradlew sonarqube -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=$SONAR_PROJECT_KEY
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then ./gradlew sonarqube -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=$SONAR_PROJECT_KEY; fi'
