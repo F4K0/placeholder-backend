@@ -17,7 +17,7 @@ addons:
   sonarcloud:
     organization: "f4k0"
     token:
-      secure: "OSE/m3qQBPQcKeqs2yutIu2Zdwd7TyoIJK5feWcI0cNoyQJ+79fY0FZuIGHK7hy3aMpJzALPzc2bSTVsw/ftcN7KmVGFVIW0cDts7pSnpPdE6Vu2wGrQG27jznxf5T/jtl/nbZWz8Sl7vt1uStD5eyvC/aIAu5iqEFVNw9i/PcNBhdcITf4/17WOawAMhNgj5w4wDsK9G6iHtRXWFgxS4DykcZ9Ol58sNsnFDjeZUIRnw/YJ2IuPSkss5Zm64iUFeLN+I+XRsEUtIDY1DmRBc9GuP/WCgYJ+sLajR0qNNYcDGsE33RmSJvTHvWqkn8EdwHdf/G9TvInti2pl5kMIwaVXfQqUKBQd86ITNRqeIKiLFZnz85HqV9I5+RRqjMpFz1gy4cscHePU47Rfvb8IYV6Cj6KpYdMblGiNddEnGQEmMDEimXh6VzBkX7sDOBjexyY6uV5o/bwQnCl0L6+nloD6zQbRgBxbWkrQK4+Iq6eSdGMHTwnwQYtBMzAeP0ZZcSJPGDWOE2i0LJs8aG3ozS2Fxr10VZpjmNHFmdf1DVYANZKc8N6gslVwtvhod53V/GLp6RD2AlylEK78EPRBvLqQpWMkExv5d+C4heNavPp8i5vfrsXhEoZYCN1sgq3gAu/HkHL4a9au6BIAjxkpKET+KGZygF/VgCc/EnuGxh8="
+      secure: $SONAR_TOKEN
 
 script:
-  - ./gradlew sonarqube
+  - ./gradlew sonarqube -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=$SONAR_PROJECT_KEY
