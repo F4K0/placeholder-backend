@@ -18,7 +18,7 @@ public class MapsConnection {
     MapsConnection() {
         // TODO probably put this somewhere else
         if (GMAPS_KEY == null) {
-            throw new IllegalArgumentException("Please export environment variable GMAPS_API_KEY");
+            // TODO throw new IllegalArgumentException("Please export environment variable GMAPS_API_KEY");
         }
     }
 
