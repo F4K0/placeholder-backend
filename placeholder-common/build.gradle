@@ -1,6 +1,4 @@
 plugins {
-    id 'org.springframework.boot' version '2.2.4.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
     id "jacoco"
     id "org.sonarqube" version "2.8"
@@ -48,28 +46,9 @@ sourceSets {
 }
 
 dependencies {
-    implementation 'org.springframework.boot.experimental:spring-boot-starter-data-r2dbc'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.boot:spring-boot-starter-webflux'
-    implementation 'org.liquibase:liquibase-core'
-    implementation project(":placeholder-common")
     implementation "org.projectlombok:lombok:1.18.12"
     implementation "com.fasterxml.jackson.core:jackson-databind:2.10.2"
     annotationProcessor "org.projectlombok:lombok:1.18.12"
-    implementation "org.apache.commons:commons-lang3:3.0"
-    runtimeOnly 'io.r2dbc:r2dbc-h2'
-    runtimeOnly 'io.r2dbc:r2dbc-postgresql'
-    testImplementation('org.springframework.boot:spring-boot-starter-test') {
-        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-    }
-    testImplementation 'io.projectreactor:reactor-test'
-    testImplementation 'org.springframework.security:spring-security-test'
-}
-
-dependencyManagement {
-    imports {
-        mavenBom 'org.springframework.boot.experimental:spring-boot-bom-r2dbc:0.1.0.M3'
-    }
 }
 
 test {
