@@ -21,5 +21,6 @@ import java.util.List;
 @Data
 public class PlaceOpeningHours {
     private List<String> stringRepresentation;
-    // TODO only string representation for now
+    // TODO PLCH-51
+    //  only string representation for now
 }

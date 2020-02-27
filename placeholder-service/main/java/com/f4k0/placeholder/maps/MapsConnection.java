@@ -16,9 +16,11 @@ public class MapsConnection {
     private static final Logger LOGGER = LoggerFactory.getLogger(MapsClient.class);
 
     MapsConnection() {
-        // TODO probably put this somewhere else
+        // TODO PLCH-49
+        //  probably put this somewhere else
         if (GMAPS_KEY == null) {
-            // TODO throw new IllegalArgumentException("Please export environment variable GMAPS_API_KEY");
+            // TODO PLCH-45
+            //  throw new IllegalArgumentException("Please export environment variable GMAPS_API_KEY");
         }
     }
 

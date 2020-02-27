@@ -5,4 +5,5 @@ package place;
  */
 public enum PlaceType {
     RESTAURANT
+    // TODO PLCH-52
 }

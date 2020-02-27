@@ -21,8 +21,8 @@ Place {
     private Double locationX;
     private Double locationY;
 
-    // TODO
-    // private List<String> photos;
+    // TODO PLCH-50
+    //  private List<String> photos;
 
     @JsonProperty("price_level")
     private Integer priceLevel;
